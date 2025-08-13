@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - UniShare</title>
+    <link rel="stylesheet" href="./stylesheets/dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">UniShare</div>
+            <div class="user-info">
+                <div class="user-avatar">DM</div>
+                <span>Demo Student</span>
+                <button class="logout-btn" onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <h1 class="welcome-title">Welcome back, Demo!</h1>
+            <p class="welcome-subtitle">Ready to share resources and build community? Here's what's happening on campus today.</p>
+        </section>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <div class="action-card" onclick="navigateTo('list-item')">
+                <div class="action-icon">📦</div>
+                <h3 class="action-title">List an Item</h3>
+                <p class="action-description">Share something you own with the campus community</p>
+            </div>
+            <div class="action-card" onclick="navigateTo('browse')">
+                <div class="action-icon">🔍</div>
+                <h3 class="action-title">Browse Items</h3>
+                <p class="action-description">Find textbooks, electronics, and more from fellow students</p>
+            </div>
+            <div class="action-card" onclick="navigateTo('my-requests')">
+                <div class="action-icon">📋</div>
+                <h3 class="action-title">My Requests</h3>
+                <p class="action-description">Track your borrowing requests and lending approvals</p>
+            </div>
+        </div>
+
+        <!-- Stats Overview -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">247</div>
+                <div class="stat-label">Items Available</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">89</div>
+                <div class="stat-label">Active Members</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">156</div>
+                <div class="stat-label">Successful Shares</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">98%</div>
+                <div class="stat-label">Return Rate</div>
+            </div>
+        </div>
+
+        <!-- Activity Section -->
+        <div class="activity-section">
+            <!-- My Recent Activity -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h2 class="activity-title">My Recent Activity</h2>
+                </div>
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <div class="activity-icon" style="background: #dbeafe; color: #1e40af;">📖</div>
+                        <div class="activity-content">
+                            <div class="activity-text">Your "Calculus II Textbook" was requested by Shafin</div>
+                            <div class="activity-time">2 hours ago</div>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon" style="background: #d1fae5; color: #065f46;">✅</div>
+                        <div class="activity-content">
+                            <div class="activity-text">You successfully borrowed "Digital Camera" from Aryan.</div>
+                            <div class="activity-time">1 day ago</div>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon" style="background: #fef3c7; color: #92400e;">📦</div>
+                        <div class="activity-content">
+                            <div class="activity-text">You listed "Python Programming Book" for lending</div>
+                            <div class="activity-time">3 days ago</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Campus Activity -->
+            <div class="activity-card">
+                <div class="activity-header">
+                    <h2 class="activity-title">Campus Activity</h2>
+                </div>
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <div class="activity-icon" style="background: #fee2e2; color: #dc2626;">🔥</div>
+                        <div class="activity-content">
+                            <div class="activity-text">"FSJ Textbook" - 8 requests today</div>
+                            <div class="activity-time">Most requested</div>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon" style="background: #fef3c7; color: #d97706;">💡</div>
+                        <div class="activity-content">
+                            <div class="activity-text">Lab microscope available for weekend projects</div>
+                            <div class="activity-time">2 hours ago</div>
+                        </div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon" style="background: #ddd6fe; color: #7c2d12;">👥</div>
+                        <div class="activity-content">
+                            <div class="activity-text">15 new students joined UniShare this week!</div>
+                            <div class="activity-time">Weekly update</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Trending Items Section -->
+        <div class="activity-card" style="margin-top: 2rem;">
+            <div class="activity-header">
+                <h2 class="activity-title">Trending on Campus</h2>
+            </div>
+            <div class="trending-items">
+                <div class="trending-item">
+                    <div class="trending-category">Textbooks</div>
+                    <div class="trending-title">Computer Organization and Architecture</div>
+                    <div class="trending-requests">12 students looking for this</div>
+                </div>
+                <div class="trending-item">
+                    <div class="trending-category">Electronics</div>
+                    <div class="trending-title">Arduino Starter Kit</div>
+                    <div class="trending-requests">8 requests this week</div>
+                </div>
+                <div class="trending-item">
+                    <div class="trending-category">Lab Equipment</div>
+                    <div class="trending-title">Digital Multimeter</div>
+                    <div class="trending-requests">6 students interested</div>
+                </div>
+                <div class="trending-item">
+                    <div class="trending-category">Study Materials</div>
+                    <div class="trending-title">GATE Prep Books</div>
+                    <div class="trending-requests">9 requests pending</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./javascripts/dashboard.js"></script>
+</body>
+</html>

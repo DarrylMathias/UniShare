@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniShare - Campus Resource Sharing</title>
+    <link rel="stylesheet" href="./stylesheets/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="brand-section">
+            <div class="logo">UniShare</div>
+            <div class="tagline">
+                Share resources, build community.<br>
+                Connect with your campus through sustainable resource sharing.
+            </div>
+        </div>
+        
+        <div class="form-section">
+            <div class="form-header">
+                <h1 class="form-title">Welcome Back</h1>
+                <p class="form-subtitle">Sign in to your campus community</p>
+            </div>
+
+            <form class="login-form" id="loginForm">
+                <div class="error-message" id="errorMessage"></div>
+                <div class="success-message" id="successMessage"></div>
+
+                <div class="form-group">
+                    <input 
+                        type="email" 
+                        class="form-input" 
+                        id="email" 
+                        placeholder="Enter your student email" 
+                        required
+                    >
+                    <div class="email-domain">@tsecedu.org</div>
+                </div>
+
+                <div class="form-group">
+                    <input 
+                        type="password" 
+                        class="form-input" 
+                        id="password" 
+                        placeholder="Password" 
+                        required
+                        min="5"
+                    >
+                </div>
+
+                <button type="submit" class="login-button">
+                    Sign In to UniShare
+                </button>
+
+                <div class="forgot-password">
+                    <a href="#" onclick="showForgotPassword()">Forgot your password?</a>
+                </div>
+            </form>
+
+            <div class="campus-info">
+                <div class="campus-info-title">Campus Verification Required</div>
+                <div class="campus-info-text">
+                    Only verified students and faculty can access UniShare. Use your official university email address.
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./javascripts//login.js"></script>
+</body>
+</html>
