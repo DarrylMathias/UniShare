@@ -1,7 +1,7 @@
 function navigateTo(section) {
     switch (section) {
         case 'list-item':
-            alert('List New Item Page');
+            window.location.href = '/listitem.html'
             break;
         case 'browse':
             alert('Browse Items Page');

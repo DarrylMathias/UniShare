@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniShare - Browse Items</title>
+    <link rel="stylesheet" href="./stylesheets/browseitems.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo"><a href="/dashboard.html">UniShare</a></div>
+            <nav class="nav-links">
+                <a href="/browseitems.html">Browse</a>
+                <a href="/listitem.html">List Item</a>
+                <a href="/transactions.html">My Transactions</a>
+                <div class="user-info">
+                    <div class="user-avatar">DM</div>
+                    <span>Demo Student</span>
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="search-section">
+        <div class="search-container">
+            <input type="text" class="search-bar" placeholder="Search for books, electronics, notes..."
+                id="searchInput">
+
+            <select class="filter-dropdown" id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="books">Books & Textbooks</option>
+                <option value="electronics">Electronics</option>
+                <option value="lab-equipment">Lab Equipment</option>
+                <option value="notes">Notes & Study Materials</option>
+                <option value="sports">Sports Equipment</option>
+                <option value="other">Other</option>
+            </select>
+
+            <select class="filter-dropdown" id="sortFilter">
+                <option value="newest">Newest</option>
+                <option value="popular">Most Popular</option>
+            </select>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="results-header">
+            <div class="results-count" id="resultsCount">Showing 12 items</div>
+        </div>
+
+        <div class="items-grid" id="itemsGrid">
+        </div>
+    </main>
+
+    <script src="./javascripts/browseitems.js"></script>
+</body>
+
+</html>

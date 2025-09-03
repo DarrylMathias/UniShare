@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniShare - List an Item</title>
+    <link rel="stylesheet" href="./stylesheets/listitem.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo"><a href="/dashboard.html">UniShare</a></div>
+            <nav class="nav-links">
+                <a href="/browseitems.html">Browse</a>
+                <a href="/listitem.html">List Item</a>
+                <a href="/transactions.html">My Transactions</a>
+                <div class="user-info">
+                    <div class="user-avatar">DM</div>
+                    <span>Demo Student</span>
+                    <button class="logout-btn" onclick="logout()">Logout</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+
+        <form class="form-container">
+            <div class="form-section">
+                <h3>Basic Information</h3>
+                <div class="form-group">
+                    <label for="item-title">Item Title *</label>
+                    <input type="text" id="item-title" placeholder="e.g., Calculus Textbook, MacBook Pro, Lab Goggles"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description *</label>
+                    <textarea id="description" placeholder="Provide details about your item and its condition..."
+                        required></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="category">Category *</label>
+                        <select id="category" required>
+                            <option value="">Select category</option>
+                            <option value="books">Books & Textbooks</option>
+                            <option value="electronics">Electronics</option>
+                            <option value="lab-equipment">Lab Equipment</option>
+                            <option value="notes">Notes & Study Materials</option>
+                            <option value="sports">Sports Equipment</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="item-type">Sharing Type *</label>
+                        <select id="item-type" required>
+                            <option value="lend">Lend (temporary)</option>
+                            <option value="donate">Donate (permanent)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Photos</h3>
+                <div class="photo-upload" onclick="document.getElementById('photo-input').click()">
+                    <div class="photo-upload-icon">📷</div>
+                    <p>Click to upload photos</p>
+                    <small>Up to 5 photos • JPG, PNG • Max 5MB each</small>
+                    <input type="file" id="photo-input" multiple accept="image/*" style="display: none;">
+                    <div id="file-error" class="file-error" style="display: none; color: red;"></div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Details</h3>
+                <div class="form-group">
+                    <label>Item Condition *</label>
+                    <div class="condition-options">
+                        <div class="condition-option">
+                            <input type="radio" id="new" name="condition" value="new">
+                            <label for="new">Like New</label>
+                        </div>
+                        <div class="condition-option">
+                            <input type="radio" id="good" name="condition" value="good">
+                            <label for="good">Good</label>
+                        </div>
+                        <div class="condition-option">
+                            <input type="radio" id="fair" name="condition" value="fair">
+                            <label for="fair">Fair</label>
+                        </div>
+                        <div class="condition-option">
+                            <input type="radio" id="poor" name="condition" value="poor">
+                            <label for="poor">Poor</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pickup-location">Pickup Location</label>
+                        <input type="text" id="pickup-location" placeholder="e.g., Library, Student Lounge, Canteen">
+                    </div>
+                    <div class="form-group">
+                        <label for="max-duration">Max Lending Duration</label>
+                        <select id="max-duration">
+                            <option value="1-day">1 Day</option>
+                            <option value="3-days">3 Days</option>
+                            <option value="1-week">1 Week</option>
+                            <option value="2-weeks">2 Weeks</option>
+                            <option value="1-month">1 Month</option>
+                            <option value="semester">Full Semester</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Publish Item</button>
+        </form>
+    </div>
+
+    <script src="./javascripts/listitem.js"></script>
+</body>
+
+</html>

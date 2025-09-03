@@ -5,54 +5,53 @@
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background: #fafafa;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
+  color: #1f1f1f;
 }
 
 .login-container {
   background: white;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: 100%;
-  max-width: 900px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
   display: grid;
   grid-template-columns: 1fr 1fr;
+  width: 100%;
+  max-width: 850px;
+  overflow: hidden;
   min-height: 500px;
 }
 
 .brand-section {
-  background: linear-gradient(45deg, #4f46e5, #7c3aed);
-  padding: 60px 40px;
+  background: #f3e8ff;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
+  padding: 40px;
+  color: #6b21a8;
   position: relative;
   overflow: hidden;
 }
 
 .logo {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  z-index: 1;
+  margin-bottom: 12px;
 }
 
 .tagline {
-  font-size: 1.1rem;
+  font-size: 1rem;
   opacity: 0.9;
-  line-height: 1.6;
-  z-index: 1;
+  line-height: 1.5;
 }
 
 .form-section {
-  padding: 60px 40px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,25 +59,25 @@ body {
 
 .form-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .form-title {
-  font-size: 2rem;
-  color: #1f2937;
-  margin-bottom: 10px;
+  font-size: 1.75rem;
   font-weight: 600;
+  margin-bottom: 6px;
+  color: #1e1b4b;
 }
 
 .form-subtitle {
+  font-size: 0.9rem;
   color: #6b7280;
-  font-size: 1rem;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .form-group {
@@ -87,19 +86,19 @@ body {
 
 .form-input {
   width: 100%;
-  padding: 16px 20px;
-  border: 2px solid #e5e7eb;
-  border-radius: 12px;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
   font-size: 1rem;
-  transition: all 0.3s ease;
-  background: #f9fafb;
+  background: #fafafa;
+  transition: all 0.2s ease;
 }
 
 .form-input:focus {
   outline: none;
-  border-color: #4f46e5;
+  border-color: #a855f7;
   background: white;
-  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+  box-shadow: 0 0 0 3px rgba(168,85,247,0.15);
 }
 
 .form-input::placeholder {
@@ -108,65 +107,64 @@ body {
 
 .email-domain {
   position: absolute;
-  right: 20px;
+  right: 16px;
   top: 50%;
   transform: translateY(-50%);
   color: #6b7280;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   pointer-events: none;
 }
 
 .login-button {
-  background: linear-gradient(45deg, #4f46e5, #7c3aed);
+  background: #a855f7;
   color: white;
   border: none;
-  padding: 16px 24px;
-  border-radius: 12px;
+  padding: 14px;
+  border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
   margin-top: 10px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .login-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);
+  background: #9333ea;
 }
 
 .login-button:active {
-  transform: translateY(0);
+  transform: scale(0.98);
 }
 
 .error-message {
-  background: #fee2e2;
+  background: #fef2f2;
   color: #dc2626;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  border-left: 3px solid #dc2626;
   display: none;
-  border-left: 4px solid #dc2626;
 }
 
 .success-message {
-  background: #d1fae5;
+  background: #ecfdf5;
   color: #065f46;
-  padding: 12px 16px;
+  padding: 10px 14px;
   border-radius: 8px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  border-left: 3px solid #10b981;
   display: none;
-  border-left: 4px solid #10b981;
 }
 
 .forgot-password {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 16px;
 }
 
 .forgot-password a {
-  color: #4f46e5;
-  text-decoration: none;
+  color: #9333ea;
   font-size: 0.9rem;
+  text-decoration: none;
 }
 
 .forgot-password a:hover {
@@ -174,48 +172,45 @@ body {
 }
 
 .campus-info {
-  background: #f0f9ff;
-  padding: 16px;
+  background: #f5f3ff;
+  padding: 14px;
   border-radius: 8px;
   margin-top: 20px;
-  /* border-left: 4px solid #0ea5e9; */
 }
 
 .campus-info-title {
   font-weight: 600;
-  color: #0c4a6e;
-  margin-bottom: 8px;
+  color: #5b21b6;
+  margin-bottom: 6px;
 }
 
 .campus-info-text {
-  font-size: 0.9rem;
-  color: #075985;
+  font-size: 0.85rem;
+  color: #4338ca;
   line-height: 1.4;
 }
 
 @media (max-width: 768px) {
   .login-container {
     grid-template-columns: 1fr;
-    max-width: 400px;
+    max-width: 380px;
   }
-
   .brand-section {
-    padding: 40px 30px;
+    padding: 30px;
   }
   .form-title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
   .form-subtitle {
     font-size: 0.8rem;
   }
-  .email-domain{
+  .email-domain {
     display: none;
   }
   .form-section {
-    padding: 30px 30px;
+    padding: 30px;
   }
-
   .logo {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
